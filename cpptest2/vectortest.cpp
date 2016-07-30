@@ -3,8 +3,9 @@
 # include <vector>
 using namespace std;
 
-void print_vec(vector<int> a){
-	for (vector<int>::iterator iter = a.begin(); iter != a.end(); iter++){
+template<typename T>
+void print_vec(vector<T> a){
+	for (vector<T>::iterator iter = a.begin(); iter != a.end(); iter++){
 		cout << *iter << "  ";
 	}
 	for (auto item : a){
@@ -16,18 +17,18 @@ void print_vec(vector<int> a){
 
 int main(){
 	cout << 123 << endl;
-
-	int xx[5] = { 1, 2, 3, 4, 5 };
-	for (int item : xx){
-		cout << item;
-	}
-
 	vector<int> vec;
 	int len = 10;
 	for (int i = 0; i <= len ; i++){
 		vec.push_back(i);
 	}
 	print_vec(vec);
+
+	vector <char> cvec;
+	for (char x = 'a'; x <= 'a' + len; x++){
+		cvec.push_back(x);
+	}
+	print_vec(cvec);
 
 	vector<int> newvec;
 	for (int i = 0; i <= len; i++)
@@ -39,6 +40,6 @@ int main(){
 
 	vec.insert(vec.begin(),newvec.begin(),newvec.end());
 	print_vec(vec);
-	cin.get();
+	std::cin.get();
 	return 0;
 }
