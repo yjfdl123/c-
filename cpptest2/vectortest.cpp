@@ -15,7 +15,7 @@ void print_vec(vector<T> a){
 	cout << endl;
 }
 
-int main(){
+int mainvec(){
 	cout << 123 << endl;
 	vector<int> vec;
 	int len = 10;

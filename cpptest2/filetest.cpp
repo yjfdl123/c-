@@ -4,7 +4,7 @@
 # include <cstdlib>
 using namespace std;
 
-int main1(){
+int mainfile(){
 	cout << 123 << endl;
 	ifstream fin;
 	ofstream fout;
